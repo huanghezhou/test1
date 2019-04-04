@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;border: none;}
+        .ani-box{
+            width: 300px;
+            height: 170px;margin: 100px auto;position: relative;
+        }
+        .img-box{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            perspective: 800px;
+            transform-style: preserve-3d;
+        }
+        .img-box img:nth-child(1){
+            display: block;
+            width: 100%;
+            transform: rotateY(0deg);
+            
+            animation: imgAm1 20s linear infinite;
+        }
+        .img-box img:nth-child(2){
+            display: block;
+            width: 100%;
+            transform: rotateY(0deg);
+            
+            animation: imgAm2 20s linear infinite;
+        }
+        .img-box img:nth-child(3){
+            display: block;
+            width: 100%;
+            transform: rotateY(0deg);
+            
+            animation: imgAm3 20s linear infinite;
+        }
+        .img-box img:nth-child(4){
+            display: block;
+            width: 100%;
+            transform: rotateY(0deg);
+            
+            animation: imgAm4 20s linear infinite;
+        }
+        @keyframes imgAm1{
+            0%{
+                transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+            }
+            100%{
+                transform: rotateY(360deg) rotateX(360deg) rotateZ(0deg);
+            }
+        }
+         @keyframes imgAm2{
+            0%{
+                transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+            }
+            100%{
+                transform: rotateY(360deg) rotateX(0deg) rotateZ(360deg);
+            }
+        }
+         @keyframes imgAm3{
+            0%{
+                transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+            }
+            100%{
+                transform: rotateY(0deg) rotateX(360deg) rotateZ(360deg);
+            }
+        }
+         @keyframes imgAm4{
+            0%{
+                transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+            }
+            100%{
+                transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ani-box">
+        <div class="img-box">
+            <img src="image/timg.jpg" alt="">
+            <img src="image/timg.jpg" alt="">
+            <img src="image/timg.jpg" alt="">
+            <img src="image/timg.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

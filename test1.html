@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;border: none;list-style: none;
+        }
+        body{
+            background: #000125;
+        }
+        .out{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -150px;
+            perspective: 8000px;
+        }
+        .out-style{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg) rotatez(-30deg);
+            
+            animation: circle 10s linear infinite;
+        }
+        .out-style:after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            width: 2px;
+            height: 500px;
+/*            background: #a500d4;*/
+        }
+        .out-style li{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border: solid 1px #ffffff;
+            border-radius: 50%;
+        }
+        .next3{
+            width: 200px;
+            height: 200px;
+        }
+        .next2{
+            width: 100px;
+            height: 100px;
+        }
+        .out-style li:nth-child(1){transform: rotateY(0); }
+        .out-style li:nth-child(2){transform: rotateY(36deg);}
+        .out-style li:nth-child(3){transform: rotateY(72deg);}
+        .out-style li:nth-child(4){transform: rotateY(108deg);}
+        .out-style li:nth-child(5){transform: rotateY(144deg);}
+        
+        @keyframes circle{
+            0%{
+/*                x轴和z轴保持不变，围绕着y轴转*/
+                transform: rotateX(-30deg) rotateZ(-30deg) rotateY(0deg);
+            }
+            100%{
+                transform: rotateX(-30deg) rotateZ(-30deg) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <ul class="out-style">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="out">
+        <ul class="out-style">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="out next2">
+        <ul class="out-style">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="out next3">
+        <ul class="out-style">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
